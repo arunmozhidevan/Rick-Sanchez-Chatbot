@@ -6,7 +6,7 @@ from torch.utils.data import Dataset, DataLoader
 from nlp_utils import bag_of_words, tokenize, stem
 from NeuralModel import NeuralNet
 
-with open(r"Rick and Morty\new_intents.json", 'r') as f:
+with open(r"Rick-Sanchez-Chatbot\files\new_intents.json", 'r') as f:
     intents = json.load(f)
 
 all_words = []
@@ -119,7 +119,7 @@ data = {
 "tags": tags
 }
 
-FILE = "Rick and Morty\model.pth"
+FILE = r"Rick-Sanchez-Chatbot\files\model.pth"
 torch.save(data, FILE)
 
 print(f'training complete. file saved to {FILE}')
