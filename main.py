@@ -6,10 +6,10 @@ from nlp_utils import bag_of_words, tokenize
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
-with open(r"Rick and Morty\new_intents.json", 'r') as json_data:
+with open(r"Rick-Sanchez-Chatbot\files\new_intents.json", 'r') as json_data:
     intents = json.load(json_data)
 
-FILE = r"Rick and Morty\model.pth"
+FILE = r"Rick-Sanchez-Chatbot\files\model.pth"
 data = torch.load(FILE)
 
 input_size = data["input_size"]
